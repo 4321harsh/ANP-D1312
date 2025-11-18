@@ -1,0 +1,195 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #5a60ff, #6fc3ff);
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+  
+  h1, h2, h3 {
+    text-align: center;
+  }
+  
+  .btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #5a60ff;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #3a3fff;
+    transform: scale(1.05);
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  /* Login Page */
+  .login-container {
+    width: 90%;
+    max-width: 400px;
+    margin: 120px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    text-align: center;
+  }
+  
+  .login-container input {
+    width: 100%;
+    padding: 12px;
+    margin: 15px 0;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    transition: 0.3s;
+  }
+  
+  .login-container input:focus {
+    border-color: #5a60ff;
+    box-shadow: 0 0 10px rgba(90,96,255,0.3);
+  }
+  
+  /* Dashboard */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 15px 30px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  
+  .logout-btn {
+    background-color: #ff4d4d;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .logout-btn:hover {
+    background-color: #ff1a1a;
+    transform: scale(1.1);
+  }
+  
+  .dashboard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin: 40px auto;
+    max-width: 1000px;
+  }
+  
+  .add-expense, .summary {
+    background: white;
+    border-radius: 20px;
+    padding: 25px;
+    width: 420px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+  }
+  
+  .add-expense:hover, .summary:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  }
+  
+  input[type="text"], input[type="number"], input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    transition: 0.3s;
+  }
+  
+  input:focus {
+    border-color: #5a60ff;
+    box-shadow: 0 0 8px rgba(90,96,255,0.3);
+  }
+  
+  /* Table */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  th {
+    background: #5a60ff;
+    color: white;
+  }
+  
+  .action-btn {
+    padding: 6px 10px;
+    border-radius: 5px;
+    color: white;
+    font-size: 13px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .edit-btn {
+    background-color: #4CAF50;
+  }
+  
+  .edit-btn:hover {
+    background-color: #43a047;
+    transform: scale(1.1);
+  }
+  
+  .delete-btn {
+    background-color: #ff4d4d;
+  }
+  
+  .delete-btn:hover {
+    background-color: #ff1a1a;
+    transform: scale(1.1);
+  }
+  
+  /* Animations */
+  .fade-in { animation: fadeIn 1s ease; }
+  .fade-in-down { animation: fadeInDown 1s ease; }
+  .slide-in-left { animation: slideLeft 1s ease; }
+  .slide-in-right { animation: slideRight 1s ease; }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes slideLeft {
+    from { opacity: 0; transform: translateX(-50px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+  
+  @keyframes slideRight {
+    from { opacity: 0; transform: translateX(50px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+  

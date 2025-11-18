@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Tracker | Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="dashboard">
+    <h1>Welcome, <span id="userName"></span> </h1>
+    <button id="logoutBtn">Logout</button>
+
+    <hr>
+
+    <!-- Expense form and summary will go here -->
+    <div id="expenseSection">
+      <input type="text" id="expenseName" placeholder="Expense name">
+      <input type="number" id="expenseAmount" placeholder="Amount">
+      <input type="date" id="expenseDate">
+      <button id="addExpenseBtn">Add Expense</button>
+
+      <h2>Your Expenses</h2>
+      <table id="expenseTable" border="1" cellpadding="8">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Amount</th>
+            <th>Date</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="expenseBody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script>
+    // Fetch logged-in username
+    const user = localStorage.getItem("loggedInUser");
+
+    // Redirect if not logged in
+    if (!user) {
+      window.location.href = "index.htm";
+    }
+
+    document.getElementById("userName").textContent = user;
+
+    // Logout
+    document.getElementById("logoutBtn").addEventListener("click", () => {
+      localStorage.removeItem("loggedInUser");
+      window.location.href = "index.htm";
+    });
+  </script>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
